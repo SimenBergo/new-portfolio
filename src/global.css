@@ -1,0 +1,191 @@
+/**
+ * WHAT IS THIS FILE?
+ *
+ * Globally applied styles. No matter which components are in the page or matching route,
+ * the styles in here will be applied to the Document, without any sort of CSS scoping.
+ *
+ */
+
+:root {
+  --qwik-dark-blue: #006ce9;
+  --qwik-light-blue: #18b6f6;
+  --qwik-light-purple: #ac7ff4;
+  --qwik-dark-purple: #713fc2;
+  --title-color: #F9CC0B;
+  --text-color: #fff;
+  --dark-bg: #0C1D36;
+}
+
+body {
+  background-color: var(--dark-bg);
+  font-family: Plus Jakarta Sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  padding: 0;
+  margin: 0;
+}
+
+/*  */
+h1 {
+  font-family: Plus Jakarta Sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  
+  font-size: 40px;
+  color: rgb(102, 178, 255);
+}
+main {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+}
+
+h1,
+h2 {
+  margin: 0 0 5px 0;
+}
+
+.lightning {
+  filter: hue-rotate(175deg);
+}
+
+section {
+  padding: 20px;
+  padding-top: 7rem;
+  height: 170vh;
+  display: flex;
+  justify-content: center;
+  max-width: 1100px;
+}
+
+ul {
+  list-style-type: square;
+  margin: 5px 0 30px 0;
+  padding-left: 25px;
+}
+
+li {
+  padding: 5px 0;
+}
+
+li::marker {
+  color: var(--qwik-light-blue);
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: black;
+  font-size: 22px;
+  font-weight: 600;
+  font-family: 'Poppins', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+a p:hover {
+  text-decoration: none;
+  color: #006ce9;
+  transition-duration: 0.05s;
+}
+
+table.commands {
+  margin: 0 0 30px 0;
+}
+
+.commands td {
+  padding: 5px;
+}
+
+.commands td:first-child {
+  white-space: nowrap;
+  padding-right: 20px;
+}
+
+code {
+  font-family: Menlo, Monaco, Courier New, monospace;
+  font-size: 0.9em;
+  background-color: rgb(224, 224, 224);
+  padding: 2px 4px;
+  border-radius: 3px;
+  border-bottom: 2px solid #bfbfbf;
+}
+
+footer {
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0.6rem 0;
+}
+
+.footer-content {
+  max-width: 1100px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#links a {
+  padding: 1% 4%;
+}
+
+#links {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
+  margin: 2px;
+}
+
+#links a:hover {
+  transform: scale(1.05);
+  transition-duration: 0.4s;
+}
+
+
+
+@media screen and (max-width: 550px) {
+  footer {
+      flex-flow: column;
+      justify-content: flex-end;
+      align-items: center;
+      min-height: 200px;
+      padding: 1%;
+  }
+
+  #links {
+      justify-content: center;
+  }
+
+  #links a {
+      padding: 4%;
+  }
+
+  footer p {
+      margin: 1% 4%;
+  }
+
+}
+
+a.mindblow {
+  margin: 0 auto;
+  display: block;
+  background: var(--qwik-light-purple);
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 0;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  width: fit-content;
+  border-bottom: 4px solid black;
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🤯</text></svg>")
+      16 0,
+    auto; /*!emojicursor.app*/
+}
+
+a.mindblow:hover {
+  border-bottom-width: 0px;
+  margin-bottom: 4px;
+  transform: translateY(4px);
+}
